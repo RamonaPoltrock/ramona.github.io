@@ -1,0 +1,128 @@
+/* For this blog we'll use a web font called Montserrat. Add an @import rule to import the web font. Psst: 400 and 700 stand for normal and bold typefaces */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*bodyrule and get rid of the gaps on top of the page*/
+body {
+  color: #555;
+  margin: 0;
+  /*In order to use Montserrat for all the elements on the website, we need to put it in a rule that affects all the elements. Set font-family to 'Montserrat' in the body rule and use sans-serif as backup */
+  font-family: 'Montserrat', sans-serif;
+}
+/*rule for the <div> element with ID header; position the element within the header*/
+#header {
+  background-color: #1abc9c;
+  height: 150px;
+  line-height: 150px
+}
+/*add a rule for all <a> elements inside the header section. Psst: this rule affects the links in the title and in the navigation*/
+#header a {
+  color: white;
+  text-decoration: none;
+/*transform the links to uppercase letters but we want to change the actual text within the <a> elements and give the letters some space*/
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+/*the color of the links should change we hover (pseudo-class) over them*/
+#header a:hover {
+  color: #222;
+}
+/*add a #header-title rule that sets the display property to black and the float property to left*/
+#header-title {
+  display: block;
+  float: left;
+/*set the look to the header elements*/
+  font-size: 20px;
+  font-weight: bold;
+}
+/*create below the #header-title rule a #header-nav rule with the same properties but make stick to the right; get rid of the space at the top by setting the list's margin-top property to 0*/
+#header-nav {
+  display: block;
+  float: right;
+  margin-top: 0;
+}
+/* Create a rule for list items within header-nav and set the display property to inline*/
+#header-nav li {
+  display: inline;
+  padding-left: 20px;
+}
+/*For the horizontal position of the element add a container rule hat sets max-width to 1000px and to position the element in the horizontal center marfin tp 0 auto*/
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/*The footer won't have a fixed height. It'll calculate its height based on the elements within it. #footer rule*/
+#footer {
+  background-color: #2f2f2f;
+  padding: 50px 0;
+}
+/*In order to position the element of the footer in a single row, we'll use the column class. Psst: inline-block lets block element keep their widths and heigts, but lines them up in a row; Change the two columns which are first just next to each other into in line (vertical-align)*/
+.column {
+  min-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+/*<h4> elements in the footer should be white, in uppercase letters, and with increased letter pacing*/
+#footer h4 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+/*paragraphs in the footer should be white*/
+#footer p {
+  color: white;
+}
+/*Fix the links to social media along with the links in the content section. Add a rule for all <a> elements on the webpage.*/
+a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+/*create a rule that sets color when we hover over the links*/
+a:hover {
+  color: #F6A623;
+}
+/*In order to position the posts, we'll use the post class. Add a .post rule that sets width and to position the post (margin); add padding to posts instead of the content section to receive some space at the top, bottom and between posts*/
+/* Styling the About page will be a walk in the park because we ca reuse the .post rule */
+.post, .about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+/*get the content of about.html into the horizontal center. This needs to be a new rule because we don't want this declaration to apply to the post class */
+.about {
+  text-align: center;
+}
+/* let's get the author picture down to a reasonable size. Add a rule fpr <img> elements within the post-author class*/
+.post-auhor img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+/*to get a little space between the author picture and name*/
+.post-author span {
+  margin-left: 16px;
+}
+/*the post date should be gray, in a smaller font, bold, and in uppercase letters (with increased letter spacing). Add a rule for the post-date class*/
+.post-date {
+  color: #D2D2D2;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+/*Headlines should alwas be a little darker. Add a rule for all headlines elements from h1 through h4 and set their property*/
+h1, h2, h3, h4 {
+  color: #333
+}
+/* line in paragraphs should get some more space. Create a rule for <p> elements and set their line-height property to one and a half lines */
+p {
+  line-height: 1.5;
+}
+/* make the pictures circular. Psst: you'll need to set the boder-radius property of the pictures of that */
+.post-author img,
+.about-author img {
+  border-radius: 50%;
+}
+.post-container:nth-child(even) {
+  background-color: #f2f2f2;
+}
